@@ -34,7 +34,7 @@
             switch (series) {
                 case 'W1':
                     sn = x.value.substring(4, 8);
-                    if (sn.localeCompare('01') >= 0) {
+                    if (sn.localeCompare('012') >= 0) {
                         document.getElementById("result").innerHTML = "Уязвимость устранена";
                     } else if (sn.localeCompare('0079') >= 0) {
                         document.getElementById("result").innerHTML = "Уязвимость возможно устранена";
@@ -46,7 +46,7 @@
                     break;
                 case 'W4':
                     sn = x.value.substring(4, 8);
-                    if (sn.localeCompare('0013') >= 0) {
+                    if (sn.localeCompare('003') >= 0) {
                         document.getElementById("result").innerHTML = "Уязвимость устранена";
                     } else if (sn.localeCompare('0012') >= 0) {
                         document.getElementById("result").innerHTML = "Уязвимость возможно устранена";
@@ -59,7 +59,7 @@
                 case 'W7':
                     if (x.value.length > 8) {
                         sn = x.value.substring(4, 9);
-                        if (sn.localeCompare('0019') >= 0) {
+                        if (sn.localeCompare('003') >= 0) {
                             document.getElementById("result").innerHTML = "Уязвимость устранена";
                         } else if (sn.localeCompare('00179') >= 0) {
                             document.getElementById("result").innerHTML = "Уязвимость возможно устранена";
@@ -73,10 +73,12 @@
                     }
                     break;
                 case 'J1':
-					sn = x.value.substring(4, 8);
-                    if (sn.localeCompare('0031') >= 0) {
+		    sn = x.value.substring(4, 8);
+                    if (sn.localeCompare('003') >= 0) {
+                        document.getElementById("result").innerHTML = "Уязвимость устранена";
+                    } else if (sn.localeCompare('0021') >= 0) {
                         document.getElementById("result").innerHTML = "Уязвимость возможно устранена";
-                    } else if (sn.localeCompare('0030') <= 0) {
+                    } else if (sn.localeCompare('0020') <= 0) {
                         document.getElementById("result").innerHTML = "Уязвимость присутствует";
                     } else {
                         document.getElementById("result").innerHTML = "Нет информации";
@@ -86,9 +88,9 @@
                     sn = x.value.substring(4, 8);
                     if (sn.localeCompare('006') >= 0) {
                         document.getElementById("result").innerHTML = "Уязвимость устранена";
-                    } else if (sn.localeCompare('0051') >= 0) {
+                    } else if (sn.localeCompare('0047') >= 0) {
                         document.getElementById("result").innerHTML = "Уязвимость возможно устранена";
-                    } else if (sn.localeCompare('0050') <= 0) {
+                    } else if (sn.localeCompare('0046') <= 0) {
                         document.getElementById("result").innerHTML = "Уязвимость присутствует";
                     } else {
                         document.getElementById("result").innerHTML = "Нет информации";
@@ -98,14 +100,17 @@
                     sn = x.value.substring(4, 8);
                     if (sn.localeCompare('005') >= 0) {
                         document.getElementById("result").innerHTML = "Уязвимость устранена";
-                    } else if (sn.localeCompare('0043') >= 0) {
+                    } else if (sn.localeCompare('0041') >= 0) {
                         document.getElementById("result").innerHTML = "Уязвимость возможно устранена";
-                    } else if (sn.localeCompare('0042') <= 0) {
+                    } else if (sn.localeCompare('0040') <= 0) {
                         document.getElementById("result").innerHTML = "Уязвимость присутствует";
                     } else {
                         document.getElementById("result").innerHTML = "Нет информации";
                     }
                     break;
+                case 'W9':
+                    document.getElementById("result").innerHTML = "Нет информации, скорее всего уязвимость устранена";                    
+                    break;			    
             }
         }
         else {
